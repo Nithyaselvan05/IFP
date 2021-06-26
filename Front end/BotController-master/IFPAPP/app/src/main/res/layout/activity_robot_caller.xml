@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".robotCaller"
+
+    android:background="@drawable/bga"
+
+
+    >
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="105dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Target Location"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/titleView"
+        android:layout_marginTop="2dp"
+        android:columnCount="1"
+        android:rowCount="1"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="118dp"
+            android:layout_height="20dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/stops"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:clickable="true"
+                    android:contextClickable="false"
+                    android:divider="@color/teal_200"
+                    android:dividerHeight="4dp"
+                    android:listSelector="@drawable/list2se"
+                    android:scrollbarThumbHorizontal="@color/light_blue_900"
+                    android:textAlignment="center">
+
+                </ListView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="64dp"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="169dp"
+        app:srcCompat="@drawable/call" />
+
+    <TextView
+        android:id="@+id/target"
+        android:layout_width="188dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="603dp"
+
+        android:layout_marginEnd="191dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Select one"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="615dp"
+        android:layout_marginEnd="52dp"
+        android:clickable="true"
+        android:onClick="GO"
+        app:srcCompat="@drawable/go" />
+</RelativeLayout>

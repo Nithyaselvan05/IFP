@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg1"
+    >
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="198dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="105dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Control your Home Bot!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/titleView"
+        android:layout_marginTop="112dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="118dp"
+            android:layout_height="20dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:clickable="true"
+            android:onClick="status">
+
+
+            <LinearLayout
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="160dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/status" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="205dp"
+
+                    android:layout_height="208dp"
+                    android:fontFamily="monospace"
+                    android:text="Robot Status:         Not Found"
+                    android:textAlignment="center"
+                    android:textColor="#FABB00"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="118dp"
+            android:layout_height="20dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:onClick="setupArena"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <LinearLayout
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="160dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/arena" />
+
+                <TextView
+                    android:layout_width="205dp"
+                    android:layout_height="208dp"
+
+                    android:fontFamily="monospace"
+                    android:text="Setup Arena"
+                    android:textAlignment="center"
+                    android:textColor="#C65B4D"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="118dp"
+            android:layout_height="20dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:onClick="CallRobot"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="160dp"
+                    android:src="@drawable/call" />
+
+                <TextView
+                    android:layout_width="205dp"
+                    android:layout_height="208dp"
+
+                    android:fontFamily="monospace"
+                    android:text="Call Robot"
+                    android:textAlignment="center"
+                    android:textColor="#648CAC"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="118dp"
+            android:layout_height="20dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="10dp"
+            android:onClick="Settings"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="171dp"
+                android:layout_height="184dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="160dp"
+                    android:src="@drawable/settings" />
+
+                <TextView
+                    android:layout_width="205dp"
+                    android:layout_height="208dp"
+
+                    android:fontFamily="monospace"
+                    android:text="Settings"
+                    android:textAlignment="center"
+                    android:textColor="#AA7F00"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+</RelativeLayout>
